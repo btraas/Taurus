@@ -460,7 +460,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 			# <trs.safety> (from AdvCiv): Causes the EXE to crash
 			theKey = int(key)
 			if not self.bShift and self.bCtrl and self.bAlt and theKey == int(InputTypes.KB_R):
-				BugUtil.warn("Note (Taurus): Reloading of Art Defines (Ctrl+Alt+R) is disabled")
+				BugUtil.warn("Note (Taurus BT): Reloading of Art Defines (Ctrl+Alt+R) is disabled")
 				return 1 # Can't use this key combo for anything else
 			# </trs.safety>
 			stroke = InputUtil.Keystroke(key, self.bAlt, self.bCtrl, self.bShift)

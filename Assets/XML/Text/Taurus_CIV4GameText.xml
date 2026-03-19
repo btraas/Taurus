@@ -75,7 +75,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MENU_ENTER_MOD_NAME</Tag>
 		<English>Please enter the (folder) name of the mod to export to or clear the text field to export to BtS.</English>
-		<German>Bitte geben Sie den (Ordner-)Namen der Mod ein, für die der Spielstand gedacht ist. Verwenden Sie ein leeres Feld, um für BtS zu exportieren.</German>
+		<German>Bitte geben Sie den (Ordner-)Namen der Mod ein, fï¿½r die der Spielstand gedacht ist. Verwenden Sie ein leeres Feld, um fï¿½r BtS zu exportieren.</German>
 	</TEXT>
 	<!-- trs.modname: end -->
 
@@ -83,7 +83,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HOF_WARN</Tag>
 		<English>Known issue: If replay buttons at the bottom of the screen don't work, it can help to shorten the list through the menus.</English>
-		<German>Bekanntes Problem: Falls die Schaltflächen am unteren Ende des Bildschirms nicht funktionieren, kann es helfen, über die Menüs einen Filter einzustellen, so dass weniger Einträge angezeigt werden.</German>
+		<German>Bekanntes Problem: Falls die Schaltflï¿½chen am unteren Ende des Bildschirms nicht funktionieren, kann es helfen, ï¿½ber die Menï¿½s einen Filter einzustellen, so dass weniger Eintrï¿½ge angezeigt werden.</German>
 	</TEXT>
 	<!-- (Based on TXT_KEY_REPLAY_SCREEN_TITLE) -->
 	<TEXT>
@@ -131,7 +131,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TEAM_MET</Tag>
 		<English>We have met the %s1_CivAdj civilization</English>
-		<French>Nous avons rencontrés les %s1_CivAdj</French>
+		<French>Nous avons rencontrï¿½s les %s1_CivAdj</French>
 		<German>Wir sind erstmals der %s1:3_CivAdj Zivilisation begegnet</German>
 		<Italian>Abbiamo incontrato la civilt&#224; %s1:4_CivAdj</Italian>
 		<Spanish>Hemos encontrado la civilizaci&#243;n %s1:2_CivAdj</Spanish>
@@ -149,5 +149,10 @@
 		<German>LOD-Einstellungen nicht gefunden</German>
 	</TEXT>
 	<!-- trs.lod (end) -->
+
+	<TEXT>
+		<Tag>TXT_KEY_MISC_RADIOACTIVE_DUST_NEAR_CITY</Tag>
+		<English>Radioactive dust fills the skies near %s1_city.</English>
+	</TEXT>
 
 </Civ4GameText>

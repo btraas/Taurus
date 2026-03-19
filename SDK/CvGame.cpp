@@ -6032,78 +6032,12 @@ void CvGame::doGlobalWarming()
 				bool bChanged = false;
 
 #ifdef _MOD_GWARM
-				if (pPlot->getFeatureType() != NO_FEATURE)
+				if (!pPlot->isWater() && pPlot->getFeatureType() != eFalloutFeature)
 				{
-					if (pPlot->getFeatureType() != GC.getDefineINT("NUKE_FEATURE"))
-					{
-						// GWMod won't remove features if underlaying terrain can melt
-						if (pPlot->getFeatureType() != eColdFeature)
-						{
-							if ((pPlot->calculateBestNatureYield(YIELD_FOOD, NO_TEAM) > 1) && (pPlot->getFeatureType() == eTemperateFeature))
-							{
-								pPlot->setFeatureType(eWarmFeature);
-								bChanged = true;
-							}
-							else if (pPlot->getTerrainType() == eColdTerrain)
-							{
-								pPlot->setTerrainType(eTemperateTerrain);
-								bChanged = true;
-							}
-							else if (pPlot->getTerrainType() == eFrozenTerrain)
-							{
-								pPlot->setTerrainType(eColdTerrain);
-								bChanged = true;
-							}
-							else
-							{
-								pPlot->setFeatureType(NO_FEATURE);
-								bChanged = true;
-							}
-						}
-						else
-						{
-							pPlot->setFeatureType(NO_FEATURE);
-							bChanged = true;
-						}
-					}
-				}
-				else if (!pPlot->isWater())  // GWMod added check for water tile M.A.
-				{
-					// GWMod stepped terrain changes M.A.
-					if (pPlot->getTerrainType() == eBarrenTerrain)
-					{
-						if (isOption(GAMEOPTION_RISING_SEAS))
-						{
-							if (pPlot->isCoastalLand())
-							{
-								if (!pPlot->isHills() && !pPlot->isPeak())
-								{
-									pPlot->setTerrainType(eShallowsTerrain);
-									bChanged = true;
-								}
-							}
-						}
-					}
-					else if (pPlot->getTerrainType() == eDryTerrain)
-					{
-						pPlot->setTerrainType(eBarrenTerrain);
-						bChanged = true;
-					}
-					else if (pPlot->getTerrainType() == eTemperateTerrain)
-					{
-						pPlot->setTerrainType(eDryTerrain);
-						bChanged = true;
-					}
-					else if (pPlot->getTerrainType() == eColdTerrain)
-					{
-						pPlot->setTerrainType(eTemperateTerrain);
-						bChanged = true;
-					}
-					else if (pPlot->getTerrainType() == eFrozenTerrain)
-					{
-						pPlot->setTerrainType(eColdTerrain);
-						bChanged = true;
-					}
+					if (pPlot->getFeatureType() != NO_FEATURE)
+						pPlot->setFeatureType(NO_FEATURE);
+					pPlot->setFeatureType(eFalloutFeature);
+					bChanged = true;
 				}
 #else
 				if (pPlot->getFeatureType() != NO_FEATURE)
@@ -6133,7 +6067,7 @@ void CvGame::doGlobalWarming()
 					{
 						if (pPlot->isVisible(pCity->getTeam(), false))
 						{
-							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_GLOBAL_WARMING_NEAR_CITY", pCity->getNameKey());
+							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RADIOACTIVE_DUST_NEAR_CITY", pCity->getNameKey());
 							gDLL->getInterfaceIFace()->addMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
 									//"AS2D_GLOBALWARMING",
 									bSoundPlayed ? NULL : "AS2D_GLOBALWARMING", // trs.sound-once

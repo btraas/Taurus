@@ -40,7 +40,7 @@ Defines common constants and functions for use throughout the BUG Mod.
 // These are display-only values, and the version should be changed for each release.
 // trs.build: Was L"BULL", L"1.3", L"216"
 #define BUG_DLL_NAME			L"Tarus BT"
-#define BUG_DLL_VERSION			L"1.03.1"
-#define BUG_DLL_BUILD			L"104"
+#define BUG_DLL_VERSION			L"1.03.2"
+#define BUG_DLL_BUILD			L"105"
 
 #endif
