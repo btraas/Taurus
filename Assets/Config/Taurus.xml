@@ -3,7 +3,7 @@
 	 (Can still split this up later if it becomes cluttered.)
 	 Credits: Taurus originally created by f1rpo (major contributor). -->
 <mod id="Taurus"
-	 name="Tarus BT" author="btraas" version="1.03.4" date="19/03/2026">
+	 name="Tarus BT" author="btraas" version="1.03.5" date="20/03/2026">
  
 	<options id="Taurus" file="Taurus.ini">
 

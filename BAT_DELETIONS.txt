@@ -1,0 +1,19 @@
+# BAT_DELETIONS.txt
+
+Tracks BAT features removed from XML because the current Taurus DLL/custom code does not support them yet.
+
+## Option: Spies return to nearest city
+- File: `Assets/XML/GameInfo/CIV4GameOptionInfos.xml`
+- Removed entry type: `GAMEOPTION_SPIES_RETURN_TO_NEAREST_CITY`
+- Reason: requires DLL-side enum/logic support (`NUM_GAMEOPTION_TYPES` mismatch caused assert in `CvInitCore.cpp`).
+
+## Option: Rising seas
+- File: `Assets/XML/GameInfo/CIV4GameOptionInfos.xml`
+- Removed entry type: `GAMEOPTION_RISING_SEAS`
+- Removed occurrences: 2 (duplicate entries were present)
+- Reason: requires DLL-side enum/logic support (`NUM_GAMEOPTION_TYPES` mismatch caused assert in `CvInitCore.cpp`).
+
+## Notes on changes made
+- Restored previously quarantined files back into `Assets/XML/GameInfo/`.
+- Edited `CIV4GameOptionInfos.xml` in place to keep only 24 game options (index 0..23), matching the current DLL expectation.
+- Current XML game option list now ends at `GAMEOPTION_NO_ESPIONAGE`.
